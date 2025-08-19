@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rynn — Portfolio Final</title>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root {
+      --brand: #7c3aed; /* violet-600 */
+      --ink: #0f172a;  /* slate-900 */
+    }
+    html, body { font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; }
+    .glass {
+      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.15);
+    }
+    .hamburger-line { transition: transform .25s ease, opacity .25s ease; height: 2px; }
+    .ham-active .line-top { transform: translateY(8px) rotate(45deg); }
+    .ham-active .line-mid { opacity: 0; }
+    .ham-active .line-bot { transform: translateY(-8px) rotate(-45deg); }
+    .shine {
+      position: relative;
+      overflow: hidden;
+    }
+    .shine::after {
+      content: "";
+      position: absolute;
+      inset: -150% -150% auto auto;
+      width: 120%;
+      height: 120%;
+      transform: rotate(25deg);
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.25), transparent);
+      animation: shine 4s linear infinite;
+    }
+    @keyframes shine {
+      0% { transform: translateX(-120%) rotate(25deg); }
+      100% { transform: translateX(120%) rotate(25deg); }
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-white">
+<!-- NAVBAR -->
+<header class="fixed top-0 left-0 right-0 z-50">
+<div class="mx-auto max-w-7xl px-6">
+<div class="flex items-center justify-between py-4">
+<a class="flex items-center gap-2" href="#home">
+<span class="inline-block size-8 rounded-xl bg-violet-600 shadow-lg shadow-violet-600/40"></span>
+<span class="text-lg font-bold tracking-wide">Rynn</span>
+</a>
+<div class="flex items-center">
+<button aria-expanded="false" aria-label="Toggle navigation" class="relative lg:hidden p-3 rounded-xl glass" id="hamburger">
+<span class="hamburger-line line-top block w-6 bg-white"></span>
+<span class="hamburger-line line-mid block w-6 bg-white my-1"></span>
+<span class="hamburger-line line-bot block w-6 bg-white"></span>
+</button>
+<nav class="hidden absolute right-6 top-16 glass rounded-2xl p-4 lg:static lg:block lg:p-0 lg:bg-transparent lg:backdrop-blur-0 lg:border-0 lg:rounded-none" id="navbar-menu">
+<ul class="flex flex-col gap-2 lg:flex-row lg:items-center lg:gap-6">
+<li><a class="block px-4 py-2 hover:text-violet-400" href="#porto">Portofolio</a></li>
+<li><a class="block px-4 py-2 hover:text-violet-400" href="#clients">Klien</a></li>
+<li><a class="block px-4 py-2 hover:text-violet-400" href="#about">Tentang</a></li>
+<li><a class="block px-4 py-2 hover:text-violet-400" href="#contact">Kontak</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</header>
+<!-- HERO -->
+<section class="relative pt-28 pb-16" id="home">
+<div class="absolute inset-0 -z-10 bg-gradient-to-b from-violet-700/20 via-slate-900 to-slate-950"></div>
+<div class="mx-auto max-w-7xl px-6">
+<div class="grid lg:grid-cols-2 items-center gap-10">
+<div>
+<p class="text-violet-400 font-semibold tracking-wide">App Dev • UI Designer • Efootball Enthusiast</p>
+<h1 class="mt-3 text-4xl/tight font-extrabold sm:text-5xl">
+            Desain <span class="text-violet-400">berkelas</span> untuk <br class="hidden sm:block"/> brand modern.
+          </h1>
+<p class="mt-4 text-slate-300 max-w-xl">
+            Portofolio ini menampilkan karya scoreboard match eFootball yang clean &amp; bold.
+            Dipercaya oleh brand besar untuk sentuhan visual yang <span class="text-white font-semibold">tepat sasaran.</span>
+</p>
+<div class="mt-6 flex items-center gap-3">
+<a class="inline-flex items-center gap-2 rounded-2xl bg-violet-600 px-5 py-3 font-semibold hover:shadow-lg hover:shadow-violet-600/40 transition" href="#porto">
+              Lihat Karya
+            </a>
+<a class="inline-flex items-center gap-2 rounded-2xl border border-white/20 px-5 py-3 hover:border-white/40 transition" href="#contact">
+              Hubungi Saya
+            </a>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -top-10 -right-10 size-40 rounded-full blur-2xl bg-violet-600/30"></div>
+<div class="relative glass rounded-3xl p-2 shadow-2xl">
+<img alt="Rynn" class="rounded-2xl w-full max-w-sm mx-auto shine" src="assetss/image-removebg-preview.png"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CLIENTS STRIP -->
+<section class="py-10" id="clients">
+<div class="mx-auto max-w-7xl px-6">
+<p class="text-center text-slate-300">Dipercaya untuk konsep &amp; desain oleh</p>
+<div class="mt-6 grid grid-cols-3 items-center gap-6 sm:gap-10 lg:gap-16">
+<!-- Google -->
+<div class="flex justify-center">
+<svg aria-label="Google" class="h-8 sm:h-10 opacity-80 hover:opacity-100 transition" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M43.611 20.083H42V20H24v8h11.303C33.676 31.807 29.223 35 24 35 16.82 35 11 29.18 11 22S16.82 9 24 9c3.314 0 6.313 1.219 8.631 3.219l5.657-5.657C34.884 3.042 29.706 1 24 1 11.85 1 2 10.85 2 23s9.85 22 22 22c12.15 0 22-9.85 22-22 0-1.474-.153-2.912-.389-4.417z" fill="#FFC107"></path>
+<path d="M6.306 14.691l6.571 4.818C14.52 15.753 18.89 13 24 13c3.314 0 6.313 1.219 8.631 3.219l5.657-5.657C34.884 3.042 29.706 1 24 1 16.318 1 9.689 4.657 6.306 10.691z" fill="#FF3D00"></path>
+<path d="M24 45c5.129 0 9.8-1.953 13.293-5.143l-6.144-5.205C29.876 36.822 27.116 38 24 38c-5.196 0-9.634-3.318-11.269-7.946l-6.52 5.02C9.559 41.303 16.255 45 24 45z" fill="#4CAF50"></path>
+<path d="M43.611 20.083H42V20H24v8h11.303c-1.19 3.514-4.21 6.196-7.951 6.652-.552.07-1.119.106-1.694.106-5.196 0-9.634-3.318-11.269-7.946l-6.52 5.02C9.559 41.303 16.255 45 24 45c7.267 0 13.366-4.234 16.053-10.392 1.049-2.374 1.611-5.02 1.611-7.608 0-1.474-.153-2.912-.389-4.417z" fill="#1976D2"></path>
+</svg>
+</div>
+<!-- YouTube -->
+<div class="flex justify-center">
+<svg aria-label="YouTube" class="h-8 sm:h-10 opacity-80 hover:opacity-100 transition" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M23.498 6.186a2.999 2.999 0 0 0-2.113-2.12C19.539 3.5 12 3.5 12 3.5s-7.539 0-9.385.566a2.999 2.999 0 0 0-2.113 2.12C0 8.033 0 12 0 12s0 3.967.502 5.814a2.999 2.999 0 0 0 2.113 2.12C4.461 20.5 12 20.5 12 20.5s7.539 0 9.385-.566a2.999 2.999 0 0 0 2.113-2.12C24 15.967 24 12 24 12s0-3.967-.502-5.814z" fill="#FF0000"></path>
+<path d="M9.75 15.02V8.98L15.5 12z" fill="#FFF"></path>
+</svg>
+</div>
+<!-- Apple -->
+<div class="flex justify-center">
+<svg aria-label="Apple" class="h-8 sm:h-10 opacity-80 hover:opacity-100 transition" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701" fill="#fff"></path>
+</svg>
+</div>
+</div>
+</div>
+</section>
+<!-- PORTFOLIO -->
+<section class="py-14" id="porto">
+<div class="mx-auto max-w-7xl px-6">
+<div class="flex items-end justify-between gap-4">
+<div>
+<h2 class="text-2xl sm:text-3xl font-extrabold">Portofolio Pilihan</h2>
+<p class="text-slate-300">Scoreboard eFootball — bold, kontras, dan mudah dibaca.</p>
+</div>
+<a class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-white/20 hover:border-white/40" href="#contact">Request Project</a>
+</div>
+<div class="mt-8 grid md:grid-cols-2 gap-8">
+<!-- Card 1 -->
+<article class="group relative rounded-3xl overflow-hidden bg-slate-900/50 border border-white/10 hover:border-violet-500/50 transition">
+<div class="aspect-video overflow-hidden">
+<img alt="Match Result 1" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" src="assetss/WhatsApp Image 2025-08-12 at 11.53.21_16e9c21f - Copy.jpg"/>
+</div>
+<div class="p-5">
+<div class="flex items-center gap-2 text-xs text-slate-300">
+<span class="px-2 py-1 rounded-md bg-violet-600/20 text-violet-300">eFootball UI</span>
+<span class="px-2 py-1 rounded-md bg-emerald-600/20 text-emerald-300">Stats Board</span>
+</div>
+<h3 class="mt-3 text-lg font-semibold">AC Milan vs Toni Kroos Academy</h3>
+<p class="text-slate-300">Desain scoreboard high-contrast dengan grid rapih dan aksen neon.</p>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="group relative rounded-3xl overflow-hidden bg-slate-900/50 border border-white/10 hover:border-violet-500/50 transition">
+<div class="aspect-video overflow-hidden">
+<img alt="Match Result 2" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" src="assetss/WhatsApp Image 2025-08-12 at 11.53.21_3023dd4b.jpg"/>
+</div>
+<div class="p-5">
+<div class="flex items-center gap-2 text-xs text-slate-300">
+<span class="px-2 py-1 rounded-md bg-violet-600/20 text-violet-300">eFootball UI</span>
+<span class="px-2 py-1 rounded-md bg-sky-600/20 text-sky-300">Score Panel</span>
+</div>
+<h3 class="mt-3 text-lg font-semibold">AC Milan vs Manchester United</h3>
+<p class="text-slate-300">Panel skor tegas dengan tipografi tebal dan perbandingan statistik jelas.</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- ABOUT -->
+<section class="py-14 border-t border-white/10" id="about">
+<div class="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-10 items-center">
+<div>
+<h2 class="text-2xl sm:text-3xl font-extrabold">Saya ngerjain yang bikin brand keliatan <span class="text-violet-400">mahal</span>.</h2>
+<p class="mt-3 text-slate-300">
+          Fokus ke visual yang kontras, layout rapi, dan animasi halus—pas untuk Google/YouTube/Apple vibes.
+          Tools harian: Figma, Tailwind, sedikit framer-motion feel.
+        </p>
+<ul class="mt-4 grid sm:grid-cols-2 gap-3 text-sm text-slate-300">
+<li class="flex items-center gap-2"><span class="size-1.5 bg-violet-400 rounded-full"></span> UI Layout &amp; Grid</li>
+<li class="flex items-center gap-2"><span class="size-1.5 bg-violet-400 rounded-full"></span> Branding &amp; Art Direction</li>
+<li class="flex items-center gap-2"><span class="size-1.5 bg-violet-400 rounded-full"></span> Tailwind + HTML</li>
+<li class="flex items-center gap-2"><span class="size-1.5 bg-violet-400 rounded-full"></span> Micro-interactions</li>
+</ul>
+</div>
+<div class="grid sm:grid-cols-2 gap-4">
+<div class="glass rounded-2xl p-5">
+<p class="text-4xl font-extrabold text-violet-400">2</p>
+<p class="text-slate-300"> proyek eFootball UI yang direvisi jadi portofolio publik.</p>
+</div>
+<div class="glass rounded-2xl p-5">
+<p class="text-4xl font-extrabold text-violet-400">3</p>
+<p class="text-slate-300"> brand besar yang jadi benchmark style (Google, YouTube, Apple).</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CONTACT -->
+<section class="py-14" id="contact">
+<div class="mx-auto max-w-3xl px-6 text-center">
+<h2 class="text-2xl sm:text-3xl font-extrabold">  project gak?</h2>
+<p class="mt-2 text-slate-300">DM konsep, kirim brief singkat, gw bantu rapihin visualnya.</p>
+<a class="mt-6 inline-flex items-center gap-2 rounded-2xl bg-violet-600 px-6 py-3 font-semibold hover:shadow-lg hover:shadow-violet-600/40 transition" href="mailto:hello@rynn.dev">Email Saya</a>
+</div>
+</section>
+<footer class="py-8 border-t border-white/10">
+<div class="mx-auto max-w-7xl px-6 flex items-center justify-between text-sm text-slate-400">
+<p>© 2025 Rynn. All rights reserved.</p>
+<a class="hover:text-white" href="#home">Back to top ↑</a>
+</div>
+</footer>
+<script>
+    const btn = document.getElementById('hamburger');
+    const menu = document.getElementById('navbar-menu');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', (!expanded).toString());
+      btn.classList.toggle('ham-active');
+    });
+  </script>
+</body>
+</html>
